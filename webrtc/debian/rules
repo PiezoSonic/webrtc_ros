@@ -65,3 +65,9 @@ override_dh_auto_install:
 	# CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
 	if [ -f "/opt/ros/jazzy/setup.sh" ]; then . "/opt/ros/jazzy/setup.sh"; fi && \
 	dh_auto_install
+	# thin archiveを通常archiveに変換
+	if ls debian/ros-jazzy-webrtc/opt/ros/jazzy/lib/*.a 1>/dev/null 2>&1; then \
+		for f in debian/ros-jazzy-webrtc/opt/ros/jazzy/lib/*.a; do \
+			printf "OPEN %s\nSAVE\nEND\n" "$$f" | ar -M; \
+		done; \
+	fi
