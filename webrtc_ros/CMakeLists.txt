@@ -12,6 +12,7 @@ find_package(webrtc REQUIRED)
 find_package(X11 REQUIRED)
 find_package(jsoncpp REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(ament_index_cpp REQUIRED)
 
 
 ###########
@@ -58,6 +59,7 @@ ament_target_dependencies(
     rclcpp
     std_msgs
     webrtc_ros_msgs    
+    ament_index_cpp
 
 )
 
