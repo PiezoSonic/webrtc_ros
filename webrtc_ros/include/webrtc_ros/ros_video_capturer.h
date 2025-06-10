@@ -37,7 +37,9 @@ public:
 	bool remote() const override;
 
 private:
-  RTC_DISALLOW_COPY_AND_ASSIGN(RosVideoCapturer);
+  RosVideoCapturer(const RosVideoCapturer&) = delete;
+  RosVideoCapturer& operator=(const RosVideoCapturer&) = delete;
+
   boost::shared_ptr<RosVideoCapturerImpl> impl_;
 };
 
@@ -56,7 +58,8 @@ public:
   void Stop();
 
 private:
-  RTC_DISALLOW_COPY_AND_ASSIGN(RosVideoCapturerImpl);
+  RosVideoCapturerImpl(const RosVideoCapturerImpl&) = delete;
+  RosVideoCapturerImpl& operator=(const RosVideoCapturerImpl&) = delete;
 
   ImageTransportFactory it_;
   const std::string topic_, transport_;

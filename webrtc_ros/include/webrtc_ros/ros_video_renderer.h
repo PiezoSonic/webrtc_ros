@@ -16,7 +16,8 @@ public:
   virtual void OnFrame(const webrtc::VideoFrame& frame) override;
 
 private:
-  RTC_DISALLOW_COPY_AND_ASSIGN(RosVideoRenderer);
+  RosVideoRenderer(const RosVideoRenderer&) = delete;
+  RosVideoRenderer& operator=(const RosVideoRenderer&) = delete;
   std::shared_ptr<image_transport::ImageTransport> it_;
   const std::string topic_;
   image_transport::Publisher pub_;

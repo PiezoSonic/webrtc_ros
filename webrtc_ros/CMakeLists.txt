@@ -11,6 +11,7 @@ find_package(webrtc_ros_msgs REQUIRED)
 find_package(webrtc REQUIRED)
 find_package(X11 REQUIRED)
 find_package(jsoncpp REQUIRED)
+find_package(OpenCV REQUIRED)
 
 
 ###########
@@ -23,7 +24,7 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
   ${webrtc_ros_msgs_INCLUDE_DIRS}
   ${webrtc_INCLUDE_DIRS}
-  
+
 )
 add_definitions(${webrtc_DEFINITIONS})
 
@@ -56,8 +57,8 @@ ament_target_dependencies(
     image_transport
     rclcpp
     std_msgs
-    webrtc_ros_msgs
-    
+    webrtc_ros_msgs    
+
 )
 
 target_link_libraries(${PROJECT_NAME}_server_node 
@@ -65,6 +66,8 @@ target_link_libraries(${PROJECT_NAME}_server_node
   webrtc
   jsoncpp_lib
   ${X11_LIBRARIES}
+  ${OpenCV_LIBS}
+  ament_index_cpp::ament_index_cpp
 )
 
 set_target_properties(${PROJECT_NAME}_server_node PROPERTIES COMPILE_OPTIONS "-std=c++17")
