@@ -13,6 +13,7 @@ find_package(X11 REQUIRED)
 find_package(jsoncpp REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(ament_index_cpp REQUIRED)
+find_package(JPEG REQUIRED)
 
 
 ###########
@@ -70,6 +71,7 @@ target_link_libraries(${PROJECT_NAME}_server_node
   ${X11_LIBRARIES}
   ${OpenCV_LIBS}
   ament_index_cpp::ament_index_cpp
+  jpeg
 )
 
 set_target_properties(${PROJECT_NAME}_server_node PROPERTIES COMPILE_OPTIONS "-std=c++17")

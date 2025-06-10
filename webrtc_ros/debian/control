@@ -1,0 +1,12 @@
+Source: ros-jazzy-webrtc-ros
+Section: misc
+Priority: optional
+Maintainer: Timo Röhling <timo.roehling@fkie.fraunhofer.de>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-async-web-server-cpp, ros-jazzy-cv-bridge, ros-jazzy-image-transport, ros-jazzy-rclcpp, ros-jazzy-rosidl-default-generators, ros-jazzy-std-msgs
+Homepage: http://wiki.ros.org/webrtc_ros
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-webrtc-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-async-web-server-cpp, ros-jazzy-cv-bridge, ros-jazzy-image-transport, ros-jazzy-rclcpp, ros-jazzy-rosidl-default-runtime, ros-jazzy-std-msgs
+Description: A collection of ROS utilities for using WebRTC with ROS

@@ -1,3 +1,10 @@
 /build/depot_tools
 /build/webrtc
-
+# Ignore build artifacts
+.obj-x86_64-linux-gnu/
+files
+ros-jazzy-webrtc.debhelper.log
+ros-jazzy-webrtc.substvars
+.debhelper/
+ros-jazzy-webrtc/
+debian/debhelper-build-stamp

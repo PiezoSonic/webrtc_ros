@@ -1,0 +1,8 @@
+# Ignore build artifacts
+.obj-x86_64-linux-gnu/
+files
+ros-jazzy-webrtc-ros-msgs.debhelper.log
+ros-jazzy-webrtc-ros-msgs.substvars
+.debhelper/
+ros-jazzy-webrtc-ros-msgs/
+debian/debhelper-build-stamp
