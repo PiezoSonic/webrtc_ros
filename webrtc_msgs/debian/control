@@ -1,0 +1,12 @@
+Source: ros-jazzy-webrtc-ros-msgs
+Section: misc
+Priority: optional
+Maintainer: Timo Röhling <timo.roehling@fkie.fraunhofer.de>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-builtin-interfaces, ros-jazzy-rosidl-default-generators
+Homepage: http://wiki.ros.org/webrtc_ros
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-webrtc-ros-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-builtin-interfaces, ros-jazzy-rosidl-default-runtime
+Description: A collection of ROS utilities for using WebRTC with ROS
