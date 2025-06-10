@@ -105,11 +105,14 @@ See the [AUTHORS](AUTHORS.md) file for a full list of contributors.
 
 1. 作成したパッケージ（3つ）を適用環境に持ち込む
    ```ros-jazzy-webrtc_59.0.4-0noble_amd64.deb```、```ros-jazzy-webrtc-ros-msgs_59.0.4-0noble_amd64.deb```、```ros-jazzy-webrtc-ros_59.0.4-0noble_amd64.deb```の3ファイルをインストールするPC等にUSBメモリや```scp```コマンドなどでコピーする
-1. 1.で持ち込んだパッケージを```/tmp```ディレクトリにコピーする
+
+以下の手順は、インストール先環境で実行する。
+
+2. 1.で持ち込んだパッケージを```/tmp```ディレクトリにコピーする
    ```bash
    cp *.deb /tmp
     ```
-2. ```apt```コマンドでインストールする
+3. ```apt```コマンドでインストールする
    ```
    sudo apt install /tmp/ros-jazzy-webrtc_59.0.4-0noble_amd64.deb /tmp/ros-jazzy-webrtc-ros-msgs_59.0.4-0noble_amd64.deb /tmp/ros-jazzy-webrtc-ros_59.0.4-0noble_amd64.deb
    ```
